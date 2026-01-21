@@ -21,7 +21,7 @@ tiktoken
 
 # LLM (Groq)
 
-groq
+groq==1.0.0
 
 # Git repo loading
 
@@ -29,8 +29,8 @@ gitpython
 
 # JavaScript / TypeScript parsing
 
-tree-sitter
-tree-sitter-languages
+tree-sitter==0.21.3
+tree-sitter-languages==1.10.2
 tree-sitter-javascript
 tree-sitter-typescript
 
