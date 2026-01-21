@@ -1,36 +1,17 @@
-# Core app
-
-streamlit
+streamlit==1.53.0
 python-dotenv
 
-# LangChain core
+langchain==1.2.6
+langchain-core==1.2.7
+langchain-community==0.4.1
 
-langchain
-langchain-core
-langchain-community
+pymongo==4.16.0
+langchain-mongodb==0.11.0
 
-# Vector store / database
-
-pymongo
-langchain-mongodb
-
-# Embeddings & reranking
-
-sentence-transformers
-tiktoken
-
-# LLM (Groq)
-
+sentence-transformers==5.2.0
+tiktoken==0.12.0
 groq==1.0.0
-
-# Git repo loading
-
-gitpython
-
-# JavaScript / TypeScript parsing
+gitpython==3.1.46
 
 tree-sitter==0.25.2
 tree-sitter-languages==1.10.2
-tree-sitter-javascript
-tree-sitter-typescript
-
