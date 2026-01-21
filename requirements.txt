@@ -1,0 +1,36 @@
+# Core app
+
+streamlit
+python-dotenv
+
+# LangChain core
+
+langchain
+langchain-core
+langchain-community
+
+# Vector store / database
+
+pymongo
+langchain-mongodb
+
+# Embeddings & reranking
+
+sentence-transformers
+tiktoken
+
+# LLM (Groq)
+
+groq
+
+# Git repo loading
+
+gitpython
+
+# JavaScript / TypeScript parsing
+
+tree-sitter
+tree-sitter-languages
+tree-sitter-javascript
+tree-sitter-typescript
+
