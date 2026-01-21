@@ -30,7 +30,6 @@ gitpython
 # JavaScript / TypeScript parsing
 
 tree-sitter==0.25.2
-tree-sitter-languages==1.10.2
 tree-sitter-javascript
 tree-sitter-typescript
 
