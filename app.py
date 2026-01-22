@@ -99,6 +99,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.info("🚀 This app runs on Streamlit Cloud and supports **public GitHub repositories only**.")
+
 st.markdown("<br>", unsafe_allow_html=True)
 
 cols = st.columns(3)
@@ -135,22 +137,23 @@ with cols[2]:
 with st.sidebar:
     st.header("📁 Repository Settings")
 
-    repo_type = st.radio(
-        "Repository Type",
-        ["Local Repository", "GitHub Repository"]
-    )
-
     repo_path = st.text_input(
-        "Repository Path / URL",
-        placeholder="https://github.com/user/repo"
+        "GitHub Repository URL",
+        placeholder="https://github.com/username/repository"
     )
 
-    force_reindex = st.checkbox("🔁 Force re-index repository")
+
+    force_reindex = st.checkbox("🔄 Rebuild repository index")
 
     if st.button("🚀 Load Repository"):
         if not repo_path.strip():
-            st.error("Please provide a valid repository path or URL.")
+            st.error("Please provide a GitHub repository URL.")
             st.stop()
+
+        if not repo_path.startswith("https://github.com/"):
+            st.error("Only public GitHub repositories are supported.")
+            st.stop()
+
 
         with st.spinner("Loading repository..."):
             docs, local_repo_path = load_repository(repo_path)
@@ -211,7 +214,7 @@ if not st.session_state.repo_loaded:
         ">
             <h3>🚀 Get Started</h3>
             <p style="color: #94a3b8;">
-                Load a local repository or paste a GitHub URL from the sidebar to begin chatting
+                Paste a public GitHub repository URL from the sidebar to begin chatting
                 with your codebase.
             </p>
             <ul style="color: #94a3b8;">
