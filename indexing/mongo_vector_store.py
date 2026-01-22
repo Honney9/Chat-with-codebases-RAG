@@ -5,8 +5,9 @@ from indexing.embedder import get_embedding_model
 
 from pymongo import MongoClient
 import certifi
+import streamlit as st
 
-MONGODB_URI = os.getenv("MONGODB_URI")
+MONGODB_URI = os.getenv("MONGODB_URI") or st.secrets.get("MONGODB_URI")
 DB_NAME = "code_rag"
 COLLECTION_NAME = "embeddings"
 INDEX_NAME = "vector_index"
